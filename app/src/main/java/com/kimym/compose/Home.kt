@@ -36,6 +36,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kimym.compose.ui.theme.ComposeThemingTheme
@@ -100,6 +101,7 @@ private fun Header(
     ) {
         Text(
             text = text,
+            style = MaterialTheme.typography.subtitle2,
             modifier = modifier
                 .fillMaxWidth()
                 .padding(horizontal = 16.dp, vertical = 8.dp)
@@ -131,6 +133,7 @@ private fun RainbowRandomEntity(
             val padding = Modifier.padding(horizontal = 16.dp)
             Text(
                 text = stringResource(id = color.color),
+                style = MaterialTheme.typography.h6,
                 modifier = padding
             )
             RainbowColorCodeData(color, padding)
@@ -144,13 +147,19 @@ private fun RainbowColorCodeData(
     color: RainbowEntity,
     modifier: Modifier = Modifier,
 ) {
+    val tagStyle = MaterialTheme.typography.overline.toSpanStyle().copy(
+        background = MaterialTheme.colors.primary.copy(alpha = 0.1f)
+    )
     val text = buildAnnotatedString {
-        append("#")
-        append(stringResource(id = color.code).uppercase(Locale.getDefault()))
+        withStyle(tagStyle) {
+            append("#")
+            append(stringResource(id = color.code).uppercase(Locale.getDefault()))
+        }
     }
     CompositionLocalProvider(LocalContentAlpha provides ContentAlpha.medium) {
         Text(
             text = text,
+            style = MaterialTheme.typography.body2,
             modifier = modifier
         )
     }
