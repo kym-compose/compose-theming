@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">ComposeTheming</string>
+    <string name="rainbow">Rainbow</string>
+    <string name="red">Red</string>
+    <string name="red_code">ed1c24</string>
+    <string name="orange">Orange</string>
+    <string name="orange_code">ff7f27</string>
+    <string name="yellow">Yellow</string>
+    <string name="yellow_code">fff200</string>
+    <string name="green">Green</string>
+    <string name="green_code">22b14c</string>
+    <string name="blue">Blue</string>
+    <string name="blue_code">3f48cc</string>
+    <string name="navy">Navy</string>
+    <string name="navy_code">000050</string>
+    <string name="purple">Purple</string>
+    <string name="purple_code">a349a4</string>
+</resources>
