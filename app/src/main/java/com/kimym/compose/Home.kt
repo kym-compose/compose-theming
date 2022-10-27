@@ -18,7 +18,6 @@ import androidx.compose.material.Icon
 import androidx.compose.material.ListItem
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.material.icons.Icons
@@ -36,13 +35,14 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.kimym.compose.ui.theme.ComposeThemingTheme
 import java.util.Locale
 
 @Composable
 fun Home() {
     val color = remember { SampleData.getColor() }
     val colors = remember { SampleData.getColors() }
-    MaterialTheme {
+    ComposeThemingTheme {
         Scaffold(
             topBar = { AppBar() }
         ) { innerPadding ->
@@ -179,7 +179,7 @@ private fun RainbowItem(
 @Composable
 private fun RainbowRandomPreview() {
     val color = remember { SampleData.getColor() }
-    Surface {
+    ComposeThemingTheme {
         RainbowRandomEntity(color = color)
     }
 }
@@ -188,7 +188,7 @@ private fun RainbowRandomPreview() {
 @Composable
 private fun RainbowItemPreview() {
     val color = remember { SampleData.getColor() }
-    Surface {
+    ComposeThemingTheme {
         RainbowItem(color = color)
     }
 }
