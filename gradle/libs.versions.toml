@@ -1,5 +1,5 @@
 [versions]
-gradlePlugin = "7.3.1"
+gradlePlugin = "7.4.2"
 kotlin = "1.7.21"
 ktlint = "11.0.0"
 
