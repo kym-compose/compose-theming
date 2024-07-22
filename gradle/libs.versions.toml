@@ -3,7 +3,7 @@ gradlePlugin = "7.3.1"
 kotlin = "1.7.21"
 ktlint = "11.0.0"
 
-androidxCore = "1.9.0"
+androidxCore = "1.13.1"
 androidxLifecycle = "2.5.1"
 
 composeActivity = "1.6.1"
